@@ -44,8 +44,8 @@ const Contact = () => {
                     <div className={styles.infoSection}>
                         <h2 className={styles.title}>Get in Touch</h2>
                         <p className={styles.subtitle}>
-                            Have questions? We'd love to hear from you. Send us a message
-                            and we'll respond as soon as possible.
+                            Have questions? We&apos;d love to hear from you. Send us a message
+                            and we&apos;ll respond as soon as possible.
                         </p>
 
                         <div className={styles.contactInfo}>
@@ -190,7 +190,9 @@ const Contact = () => {
                 <div className={styles.mapSection}>
                     <div className={styles.mapPlaceholder}>
                         {/* Replace with your actual map integration */}
-                        <div className={styles.mapOverlay}></div>
+                        <div className={styles.mapOverlay}>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.747489512204!2d72.83775047602073!3d19.4233132409759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4121a8960f0971d%3A0x4dc86d5e2721ed6a!2sSharma%20Interiors!5e0!3m2!1sen!2sin!4v1756206592483!5m2!1sen!2sin" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>

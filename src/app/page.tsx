@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Navbar from "../components/navbar/navbar";
 import Hero from "../components/hero/hero";
 import Classes from "../components/classes/classes";

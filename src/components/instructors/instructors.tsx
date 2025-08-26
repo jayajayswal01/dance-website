@@ -1,7 +1,12 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import styles from './instructors.module.css';
+import IntructorImage1 from "../../assets/instructor/instructor1.jpg"
+import IntructorImage2 from "../../assets/instructor/instructor2.jpg"
+import IntructorImage3 from "../../assets/instructor/instructor3.jpg"
+import IntructorImage4 from "../../assets/instructor/instructor4.jpg"
+
 
 interface SocialLinks {
     instagram?: string;
@@ -16,7 +21,7 @@ interface Instructor {
     specialties: string[];
     experience: string;
     bio: string;
-    image: string;
+    image: string | StaticImageData;
     socialLinks: SocialLinks;
 }
 
@@ -28,7 +33,7 @@ const instructors: Instructor[] = [
         specialties: ["Ballet", "Contemporary", "Modern Dance"],
         experience: "15+ years",
         bio: "Former principal dancer with the National Ballet, Sarah brings grace and precision to every class. Her teaching philosophy emphasizes proper technique and artistic expression.",
-        image: "/images/instructors/sarah.jpg",
+        image: IntructorImage1,
         socialLinks: {
             instagram: "#",
             youtube: "#",
@@ -42,7 +47,7 @@ const instructors: Instructor[] = [
         specialties: ["Hip Hop", "Break Dance", "Street Jazz"],
         experience: "12+ years",
         bio: "International hip hop champion and choreographer, Mike's dynamic teaching style brings out the best in his students while keeping classes high-energy and fun.",
-        image: "/images/instructors/mike.jpg",
+        image: IntructorImage2,
         socialLinks: {
             instagram: "#",
             tiktok: "#"
@@ -55,7 +60,7 @@ const instructors: Instructor[] = [
         specialties: ["Contemporary", "Modern", "Improvisation"],
         experience: "10+ years",
         bio: "Known for her innovative choreography, Emma specializes in contemporary dance and emotional expression through movement.",
-        image: "/images/instructors/emma.jpg",
+        image: IntructorImage3,
         socialLinks: {
             instagram: "#",
             youtube: "#"
@@ -68,7 +73,7 @@ const instructors: Instructor[] = [
         specialties: ["Salsa", "Bachata", "Latin Jazz"],
         experience: "13+ years",
         bio: "International Latin dance champion, Carlos brings authentic Latin dance techniques and infectious energy to every class.",
-        image: "/images/instructors/carlos.jpg",
+        image: IntructorImage4,
         socialLinks: {
             instagram: "#",
             tiktok: "#"
@@ -94,7 +99,7 @@ const Instructors = () => {
                             onMouseLeave={() => setActiveInstructor(null)}
                         >
                             <div className={styles.imageContainer}>
-                                <div className={styles.imagePlaceholder} />
+                                <Image src={instructor.image} alt={instructor.name} layout="fill" objectFit="cover" />
                                 <div className={styles.socialLinks}>
                                     {instructor.socialLinks.instagram && (
                                         <a href={instructor.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
@@ -144,7 +149,7 @@ const Instructors = () => {
                 <div className={styles.joinTeam}>
                     <h3 className={styles.joinTitle}>Want to Join Our Team?</h3>
                     <p className={styles.joinText}>
-                        We're always looking for talented and passionate dance instructors to join our family.
+                        We&apos;re always looking for talented and passionate dance instructors to join our family.
                     </p>
                     <button className={styles.applyButton}>
                         Apply Now

@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
 import styles from './about.module.css';
 
 interface Achievement {
@@ -67,12 +66,12 @@ const About = () => {
                         <div className={styles.textContent}>
                             <h2 className={styles.sectionTitle}>Our Story</h2>
                             <p className={styles.description}>
-                                Welcome to Dance Studio, where we've been inspiring and nurturing dancers 
+                                Welcome to Dance Studio, where we&apos;ve been inspiring and nurturing dancers 
                                 for over a decade. Our journey began with a simple vision: to create a 
                                 space where anyone can discover the joy of dance.
                             </p>
                             <p className={styles.description}>
-                                Today, we're proud to be one of the leading dance institutions, offering 
+                                Today, we&apos;re proud to be one of the leading dance institutions, offering 
                                 comprehensive training in various dance styles. Our commitment to excellence 
                                 and passion for dance continues to shape the next generation of dancers.
                             </p>

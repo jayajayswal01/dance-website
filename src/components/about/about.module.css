@@ -84,7 +84,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom right, rgba(51, 204, 255, 0.2), rgba(255, 153, 204, 0.2));
+    /* background: linear-gradient(to bottom right, rgba(51, 204, 255, 0.2), rgba(255, 153, 204, 0.2)); */
+    background-image: url('../../assets//about.png');
 }
 
 .achievementsSection {

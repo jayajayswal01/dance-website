@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from './hero.module.css';
 
@@ -16,7 +15,7 @@ const Hero = () => {
         }, 3000);
 
         return () => clearInterval(interval);
-    }, []);
+    },);
 
     return (
         <section className={styles.heroSection}>

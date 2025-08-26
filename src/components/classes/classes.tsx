@@ -1,8 +1,14 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import styles from './classes.module.css';
+import ClassImage1 from "../../assets/classes/ballet.jpg"
+import ClassImage2 from "../../assets/classes/hiphop.jpg"
+import ClassImage3 from "../../assets/classes/jazz.jpg"
+import ClassImage4 from "../../assets/classes/latindance.jpg"
+import ClassImage5 from "../../assets/classes/contemprory.jpg"
+import ClassImage6 from "../../assets/classes/powerdance.jpg"
 
 interface DanceClass {
     id: number;
@@ -11,7 +17,7 @@ interface DanceClass {
     description: string;
     instructor: string;
     duration: string;
-    image: string;
+    image: string | StaticImageData;
     category: 'beginner' | 'intermediate' | 'advanced';
 }
 
@@ -23,7 +29,7 @@ const danceClasses: DanceClass[] = [
         description: "Blend classical ballet techniques with modern dance elements in this expressive class.",
         instructor: "Sarah Mitchell",
         duration: "90 mins",
-        image: "/images/contemporary-ballet.jpg",
+        image: ClassImage1,
         category: "intermediate"
     },
     {
@@ -33,7 +39,7 @@ const danceClasses: DanceClass[] = [
         description: "Learn the basics of hip hop dance, including popping, locking, and breakdance moves.",
         instructor: "Mike Rodriguez",
         duration: "60 mins",
-        image: "/images/hip-hop.jpg",
+        image: ClassImage2,
         category: "beginner"
     },
     {
@@ -43,7 +49,7 @@ const danceClasses: DanceClass[] = [
         description: "Master complex jazz combinations and performance techniques in this advanced class.",
         instructor: "Lisa Johnson",
         duration: "90 mins",
-        image: "/images/jazz.jpg",
+        image: ClassImage3,
         category: "advanced"
     },
     {
@@ -53,7 +59,7 @@ const danceClasses: DanceClass[] = [
         description: "Experience the passion of Latin dance styles including Salsa, Bachata, and Merengue.",
         instructor: "Carlos Mendez",
         duration: "60 mins",
-        image: "/images/latin.jpg",
+        image: ClassImage4,
         category: "beginner"
     },
     {
@@ -63,7 +69,7 @@ const danceClasses: DanceClass[] = [
         description: "Explore fluid movements and emotional expression through contemporary dance.",
         instructor: "Emma White",
         duration: "75 mins",
-        image: "/images/contemporary.jpg",
+        image: ClassImage5,
         category: "intermediate"
     },
     {
@@ -73,7 +79,7 @@ const danceClasses: DanceClass[] = [
         description: "High-energy choreography combining multiple dance styles for experienced dancers.",
         instructor: "James Wilson",
         duration: "90 mins",
-        image: "/images/power-dance.jpg",
+        image: ClassImage6,
         category: "advanced"
     }
 ];
@@ -131,8 +137,7 @@ const Classes = () => {
                         >
                             <div className={styles.cardImageContainer}>
                                 <div className={styles.cardImage}>
-                                    {/* Replace with your actual images */}
-                                    <div className={styles.imagePlaceholder} />
+                                 <Image src={danceClass.image} alt={danceClass.name} layout="fill" objectFit="cover" />
                                 </div>
                                 <div className={styles.level}>{danceClass.level}</div>
                             </div>
