@@ -1,0 +1,238 @@
+.scheduleSection {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3f 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.scheduleWrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.daysNav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.dayButton {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    font-size: 1rem;
+}
+
+.dayButton:hover {
+    border-color: #FF3366;
+    background: rgba(255, 51, 102, 0.1);
+}
+
+.dayButton.active {
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+.scheduleGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.gridHeader {
+    display: grid;
+    grid-template-columns: 120px 1fr 150px 120px 100px 100px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+}
+
+.classRow {
+    display: grid;
+    grid-template-columns: 120px 1fr 150px 120px 100px 100px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.classRow:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+.classRow.selected {
+    background: rgba(255, 51, 102, 0.1);
+    border: 1px solid rgba(255, 51, 102, 0.3);
+}
+
+.classTime {
+    display: flex;
+    flex-direction: column;
+}
+
+.time {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.duration {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.className {
+    color: white;
+    font-weight: 500;
+}
+
+.instructor {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.levelBadge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.beginner {
+    background: rgba(52, 211, 153, 0.2);
+    color: #34D399;
+}
+
+.intermediate {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60A5FA;
+}
+
+.advanced {
+    background: rgba(239, 68, 68, 0.2);
+    color: #F87171;
+}
+
+.alllevels {
+    background: rgba(167, 139, 250, 0.2);
+    color: #A78BFA;
+}
+
+.room {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.bookButton {
+    padding: 0.6rem 1rem;
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.bookButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .gridHeader {
+        grid-template-columns: 120px 1fr auto;
+    }
+
+    .classRow {
+        grid-template-columns: 120px 1fr auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .scheduleSection {
+        padding: 4rem 1rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .scheduleWrapper {
+        padding: 1rem;
+    }
+
+    .daysNav {
+        gap: 0.5rem;
+    }
+
+    .dayButton {
+        padding: 0.6rem 1rem;
+        min-width: auto;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

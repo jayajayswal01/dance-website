@@ -1,0 +1,235 @@
+.instructorsSection {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3f 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.instructorsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.instructorCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.instructorCard:hover {
+    transform: translateY(-10px);
+    border-color: #FF3366;
+    box-shadow: 0 10px 30px rgba(255, 51, 102, 0.2);
+}
+
+.imageContainer {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 51, 102, 0.2), rgba(255, 153, 51, 0.2));
+    transition: all 0.3s ease;
+}
+
+.socialLinks {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.instructorCard:hover .socialLinks {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.socialLink {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    transform: translateY(-3px);
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.role {
+    color: #FF3366;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.specialty {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.experience {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.experienceLabel {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.bio {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.scheduleButton {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scheduleButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+.joinTeam {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.joinTitle {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #33ccff, #ff99cc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.joinText {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.applyButton {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(45deg, #33ccff, #ff99cc);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.applyButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(51, 204, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .instructorsSection {
+        padding: 4rem 1rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .instructorsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .imageContainer {
+        height: 250px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

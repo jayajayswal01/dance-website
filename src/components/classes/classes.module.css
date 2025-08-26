@@ -1,0 +1,187 @@
+.classesSection {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3f 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filterButton {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.filterButton:hover {
+    border-color: #FF3366;
+    background: rgba(255, 51, 102, 0.1);
+}
+
+.filterButton.active {
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+.classGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.classCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.classCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 51, 102, 0.3);
+}
+
+.cardImageContainer {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 51, 102, 0.2), rgba(255, 153, 51, 0.2));
+}
+
+.level {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+.cardContent {
+    padding: 1.5rem;
+}
+
+.className {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.classDescription {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.classDetails {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.detailLabel {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.learnMore {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, #FF3366, #FF9933);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.learnMore:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+@media (max-width: 768px) {
+    .classesSection {
+        padding: 4rem 1rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .classGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        gap: 0.5rem;
+    }
+
+    .filterButton {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes cardHover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
